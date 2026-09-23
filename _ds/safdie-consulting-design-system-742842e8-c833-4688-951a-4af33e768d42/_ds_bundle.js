@@ -948,7 +948,9 @@ function NavBar({
     size: "sm",
     onClick: cta.onClick,
     as: cta.href ? 'a' : 'button',
-    href: cta.href
+    href: cta.href,
+    target: cta.target,
+    rel: cta.rel
   }, cta.label) : null, /*#__PURE__*/React.createElement("button", {
     type: "button",
     "aria-expanded": menu,
@@ -990,6 +992,8 @@ function NavBar({
     onClick: cta.onClick,
     as: cta.href ? 'a' : 'button',
     href: cta.href,
+    target: cta.target,
+    rel: cta.rel,
     style: {
       background: 'var(--sc-ink)'
     }
