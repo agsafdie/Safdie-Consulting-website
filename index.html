@@ -29,6 +29,8 @@
     @media (max-width: 640px) {
       .sc-hero-media { display: none !important; }
       .sc-tiers-grid { grid-template-columns: 1fr !important; }
+      .sc-about-grid { grid-template-columns: 1fr !important; }
+      .sc-about-photo { display: none !important; }
     }
   </style>
 </helmet>
@@ -193,7 +195,7 @@
 
     <section id="about" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
       <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.about.title }}" hint-size="100%,60px"></x-import>
-      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-5); margin-top: var(--space-4); align-items: start;">
+      <div class="sc-about-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-5); margin-top: var(--space-4); align-items: start;">
         <div>
           <h3 style="margin: 0; font-size: 34px; line-height: 1.15; letter-spacing: -0.03em; font-weight: var(--weight-semibold); max-width: 760px; text-wrap: balance;">{{ C.about.headline }}</h3>
           <p style="margin-top: 22px; font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary);">{{ C.about.bio }}</p>
@@ -208,7 +210,7 @@
             <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" variant="quiet" as="a" href="https://www.linkedin.com/in/andressafdie" hint-size="auto,40px">{{ C.about.linkedinLabel }}</x-import>
           </div>
         </div>
-        <div style="aspect-ratio: 4 / 5; border-radius: var(--radius-surface); overflow: hidden; background: var(--surface-card); box-sizing: border-box;">
+        <div class="sc-about-photo" style="aspect-ratio: 4 / 5; border-radius: var(--radius-surface); overflow: hidden; background: var(--surface-card); box-sizing: border-box;">
           <img src="uploads/photo_upload-1790187132661-5aci.png" alt="Portrait of Andrés Safdie" width="320" height="400" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.75);">
         </div>
       </div>
