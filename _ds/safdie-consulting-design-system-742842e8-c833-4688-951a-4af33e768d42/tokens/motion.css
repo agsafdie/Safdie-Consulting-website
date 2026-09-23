@@ -1,0 +1,11 @@
+:root {
+  /* Motion is functional only: state feedback, never decoration. No bounce,
+     no spring, no scroll-triggered reveals, no parallax. */
+  --duration-instant: 90ms; /* @kind other */
+  --duration-fast: 140ms; /* @kind other */
+  --duration-base: 200ms; /* @kind other */
+  --ease: cubic-bezier(0.2, 0, 0.2, 1); /* @kind other */
+  --transition-state: color var(--duration-fast) var(--ease),
+                      background-color var(--duration-fast) var(--ease),
+                      border-color var(--duration-fast) var(--ease);
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safdie Consulting HR Tech advisory for global product and data architecture</title>
+  <meta name="description" content="HR Tech advisory for companies expanding into new countries or scaling to enterprise-grade volume. 25+ years building payroll, HCM, and EOR platforms.">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/tokens/base.css">
+  <link rel="stylesheet" href="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/styles.css">
+  <script src="_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; }
+    a { color: var(--text-accent); text-decoration: none; }
+    a:hover { color: var(--sc-ink); }
+    :focus-visible { outline: 2px solid var(--surface-accent); outline-offset: 2px; }
+  </style>
+</helmet>
+<div style="background: var(--surface-page); color: var(--text-body); min-height: 100vh; --radius-control: var(--radius-full); --radius-surface: 20px;">
+<sc-if value="{{ ready }}" hint-placeholder-val="{{ false }}">
+
+  <div style="position: sticky; top: 0; z-index: 40; background: var(--surface-page);">
+    <div style="display: flex; justify-content: flex-end; padding: 0 var(--page-margin); border-bottom: 1px solid var(--rule); box-sizing: border-box;">
+      <div style="position: relative;">
+        <button type="button" onClick="{{ toggleLangMenu }}" aria-expanded="{{ langMenuOpen }}" aria-haspopup="listbox" aria-label="Language" style="display: flex; align-items: center; gap: 6px; background: none; border: 0; cursor: pointer; padding: 9px 4px; font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary);">
+          <span>{{ currentLangLabel }}</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+        <sc-if value="{{ langMenuOpen }}">
+          <div role="listbox" style="position: absolute; right: 0; top: 100%; margin-top: 2px; background: var(--surface-page); border: 1px solid var(--rule); border-radius: 8px; min-width: 140px; z-index: 42; overflow: hidden;">
+            <button type="button" role="option" onClick="{{ setLangEn }}" style="display: block; width: 100%; text-align: left; padding: 10px 14px; background: none; border: 0; cursor: pointer; font-size: 13px; color: var(--text-body);">English</button>
+            <button type="button" role="option" onClick="{{ setLangEs }}" style="display: block; width: 100%; text-align: left; padding: 10px 14px; background: none; border: 0; border-top: 1px solid var(--rule-soft); cursor: pointer; font-size: 13px; color: var(--text-body);">Español</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.NavBar" from="./_ds/safdie-consulting-design-system-742842e8-c833-4688-951a-4af33e768d42/_ds_bundle.js" links="{{ C.nav }}" cta="{{ navCta }}" sticky="{{ falseVal }}" hint-size="100%,74px"></x-import>
+  </div>
+
+  <main>
+    <section id="top" style="position: relative; padding: 84px var(--page-margin) 72px; box-sizing: border-box; overflow: hidden;">
+      <div aria-hidden="true" style="position: absolute; top: -8%; right: -4%; width: 58%; height: 116%; background-image: url('uploads/Imagen para website.png'); background-size: cover; background-position: center; filter: grayscale(0.2) saturate(1.2) contrast(1.08) brightness(1.02); opacity: 1; -webkit-mask-image: linear-gradient(to left, black 48%, transparent 98%); mask-image: linear-gradient(to left, black 48%, transparent 98%); pointer-events: none; z-index: 1;"></div>
+      <div aria-hidden="true" style="position: absolute; top: -8%; right: -4%; width: 58%; height: 116%; background: color-mix(in oklab, var(--surface-accent) 15%, transparent); mix-blend-mode: multiply; -webkit-mask-image: linear-gradient(to left, black 48%, transparent 98%); mask-image: linear-gradient(to left, black 48%, transparent 98%); pointer-events: none; z-index: 1;"></div>
+      <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to left, var(--surface-page) 0%, transparent 50%); pointer-events: none; z-index: 1;"></div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 32px;">
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Eyebrow" hint-size="auto,20px">{{ C.hero.eyebrow }}</x-import>
+      </div>
+      <h1 style="margin: 0; font-size: var(--size-display); line-height: var(--lh-display); letter-spacing: var(--track-display); font-weight: var(--weight-semibold); max-width: 1000px; text-wrap: balance;">{{ C.hero.headline }}</h1>
+      <p style="margin-top: 30px; font-size: var(--size-lead); line-height: var(--lh-lead); color: var(--text-secondary); max-width: var(--measure-lead);">{{ C.hero.sub }}</p>
+      <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--rule);">
+        <sc-for list="{{ heroBullets }}" as="b" hint-placeholder-count="3">
+          <div style="display: flex; gap: 12px; align-items: baseline;">
+            
+            <span style="font-size: var(--size-small); color: var(--text-secondary);">{{ b.text }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 34px; font-size: 24px; line-height: 1.3; letter-spacing: -0.02em; font-weight: var(--weight-medium); max-width: 620px; width: 668px; height: 68px">{{ C.hero.closer }}</div>
+      <div style="display: flex; gap: 14px; margin-top: 36px; flex-wrap: wrap;">
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" href="#contact" as="a" hint-size="auto,44px">{{ C.hero.ctaPrimary }}</x-import>
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" variant="secondary" href="#how" as="a" hint-size="auto,44px">{{ C.hero.ctaSecondary }}</x-import>
+      </div>
+    </section>
+
+    <section style="background: {{ numbersSectionBg }}; padding: var(--space-5) var(--page-margin); box-sizing: border-box;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-3);">
+        <sc-for list="{{ C.numbers }}" as="n" hint-placeholder-count="4">
+          <div style="background: {{ numbersCardBg }}; border-radius: var(--radius-surface); padding: 26px 24px; box-sizing: border-box;">
+            <div style="font-size: 62px; font-weight: var(--weight-semibold); letter-spacing: -0.05em; line-height: 0.9; color: {{ numbersCardText }};">{{ n.value }}<span style="font-size: 32px; color: {{ numbersCardSubtext }};">{{ n.unit }}</span></div>
+            <div style="font-size: var(--size-small); line-height: 1.45; margin-top: 14px; color: {{ numbersCardSubtext }};">{{ n.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="problems" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.problems.title }}" hint-size="100%,80px"></x-import>
+      <div style="display: grid; gap: var(--space-6); margin-top: var(--space-5);">
+        <sc-for list="{{ C.paths }}" as="path" hint-placeholder-count="3">
+          <div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4); align-items: start;">
+              <div>
+                <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Eyebrow" hint-size="auto,20px">{{ path.title }}</x-import>
+                <div style="margin-top: 14px; font-size: var(--size-h3); line-height: 1.25; letter-spacing: var(--track-h3); font-weight: var(--weight-medium);">{{ path.strap }}</div>
+              </div>
+              <sc-if value="{{ path.intro }}">
+                <p style="font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary);">{{ path.intro }}</p>
+              </sc-if>
+            </div>
+            <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Accordion" items="{{ path.tiles }}" style="margin-top: var(--space-3);" hint-size="100%,240px"></x-import>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="how" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.how.title }}" hint-size="100%,80px"></x-import>
+      <p style="margin-top: var(--space-4); font-size: var(--size-lead); line-height: var(--lh-lead); color: var(--text-secondary); max-width: 1000px;">{{ C.tiersIntro }}</p>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-5); align-items: stretch;">
+        <sc-for list="{{ C.tiers }}" as="t" hint-placeholder-count="3">
+          <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Card" accent="{{ true }}" tone="light" padding="{{ 34 }}" dc-props="{{ tierCardProps }}" style="height: 100%; align-self: stretch;" hint-size="100%,360px">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+              <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Eyebrow" tone="accent" hint-size="auto,18px">{{ t.code }}</x-import>
+              <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Tag" tone="fill" hint-size="auto,24px">{{ t.timeline }}</x-import>
+            </div>
+            <h3 style="margin: 18px 0 0; font-size: var(--size-h3); line-height: 1.15; letter-spacing: var(--track-h3); font-weight: var(--weight-semibold);">{{ t.name }}</h3>
+            <div style="margin-top: 12px; font-size: var(--size-small); line-height: 1.45; font-weight: var(--weight-medium); color: var(--text-accent);">{{ t.strap }}</div>
+            <p style="margin-top: 16px; font-size: var(--size-small); line-height: var(--lh-small); color: var(--text-secondary);">{{ t.body }}</p>
+            <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--rule-soft); display: flex; align-items: flex-end; min-height: 86px;"><span style="font-size: 14.5px; line-height: 1.5; color: var(--text-secondary);">{{ t.bestFor }}</span></div>
+          </x-import>
+        </sc-for>
+      </div>
+      <div style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--rule);">
+        <div style="font-size: var(--size-body); color: var(--text-secondary); flex: 1; min-width: 280px;">{{ C.tiersCloser }}</div>
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" href="#contact" as="a" hint-size="auto,44px">{{ C.navCtaLabel }}</x-import>
+      </div>
+    </section>
+
+    <section id="engagement" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.engagement.title }}" note="{{ C.labels.engagement.note }}" hint-size="100%,80px"></x-import>
+      <div style="border-top: 1px solid var(--rule); margin-top: var(--space-4);">
+        <sc-for list="{{ engagementSteps }}" as="s" hint-placeholder-count="5">
+          <div style="display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: var(--space-4); padding: 26px 0; border-bottom: 1px solid var(--rule-soft);">
+            <div style="display: flex; gap: 18px; align-items: baseline;">
+              <span style="font-family: var(--font-mono); font-size: 13px; color: var(--text-accent);">{{ s.num }}</span>
+              <span style="font-size: var(--size-h3); line-height: 1.2; letter-spacing: var(--track-h3); font-weight: var(--weight-semibold);">{{ s.title }}</span>
+            </div>
+            <p style="font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary);">{{ s.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top: var(--space-4);">
+        <div style="border-top: var(--border-accent) solid var(--surface-accent); padding-top: 16px;">
+          <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Eyebrow" hint-size="auto,20px">{{ C.fit.yesLabel }}</x-import>
+          <div style="margin-top: 12px; font-size: var(--size-body); line-height: 1.5;">{{ C.fit.yes }}</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.cases.title }}" hint-size="100%,80px"></x-import>
+      <div style="border-top: 1px solid var(--rule); margin-top: var(--space-4);">
+        <sc-for list="{{ caseItems }}" as="c" hint-placeholder-count="3">
+          <div id="{{ c.id }}" style="border-bottom: 1px solid var(--rule-soft);">
+            <button type="button" onClick="{{ c.toggle }}" aria-expanded="{{ c.isOpen }}" style="width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-3); align-items: center; text-align: left; padding: 24px 0; background: none; border: 0; cursor: pointer; font: inherit; color: inherit;">
+              <span>
+                <span style="display: flex; gap: 18px; align-items: baseline;">
+                  <span style="font-family: var(--font-mono); font-size: 13px; color: var(--text-accent); flex: none;">{{ c.num }}</span>
+                  <span style="font-size: var(--size-h3); line-height: 1.2; letter-spacing: var(--track-h3); font-weight: var(--weight-semibold);">{{ c.title }}</span>
+                </span>
+                <span style="display: block; margin-top: 8px; margin-left: 31px; font-size: var(--size-small); color: var(--text-muted);">{{ c.maps }}</span>
+              </span>
+              <span aria-hidden="true" style="position: relative; width: 16px; height: 16px; flex: none;">
+                <span style="position: absolute; top: 7px; left: 0; width: 16px; height: 2px; background: var(--surface-accent); border-radius: 2px;"></span>
+                <span style="position: absolute; top: 0; left: 7px; width: 2px; height: 16px; background: var(--surface-accent); border-radius: 2px; transform: {{ c.minusTransform }}; transition: transform var(--duration-base) var(--ease);"></span>
+              </span>
+            </button>
+            <sc-if value="{{ c.isOpen }}">
+              <div style="padding: 0 0 32px 31px;">
+                <p style="margin: 0; font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary); max-width: var(--measure-body);"><strong style="color: var(--text-body); font-weight: var(--weight-semibold);">{{ C.caseLabels.problem }}: </strong>{{ c.problem }}</p>
+                <p style="margin-top: 14px; font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary); max-width: var(--measure-body);"><strong style="color: var(--text-body); font-weight: var(--weight-semibold);">{{ C.caseLabels.approach }}: </strong>{{ c.approach }}</p>
+                <p style="margin-top: 14px; font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary); max-width: var(--measure-body);"><strong style="color: var(--text-body); font-weight: var(--weight-semibold);">{{ C.caseLabels.result }}: </strong>{{ c.result }}</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-3); margin-top: 22px; max-width: 620px;">
+                  <sc-for list="{{ c.figures }}" as="f" hint-placeholder-count="3">
+                    <div>
+                      <div style="font-size: 38px; font-weight: var(--weight-semibold); letter-spacing: -0.03em; color: var(--text-accent);">{{ f.value }}<span style="font-size: 20px;">{{ f.unit }}</span></div>
+                      <div style="font-size: 13px; color: var(--text-muted); margin-top: 6px;">{{ f.label }}</div>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="about" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.about.title }}" hint-size="100%,60px"></x-import>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-5); margin-top: var(--space-4); align-items: start;">
+        <div>
+          <h3 style="margin: 0; font-size: 34px; line-height: 1.15; letter-spacing: -0.03em; font-weight: var(--weight-semibold); max-width: 760px; text-wrap: balance;">{{ C.about.headline }}</h3>
+          <p style="margin-top: 22px; font-size: var(--size-body); line-height: var(--lh-body); color: var(--text-secondary);">{{ C.about.bio }}</p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 var(--space-4); margin-top: var(--space-4); border-top: 1px solid var(--rule);">
+            <sc-for list="{{ aboutFacts }}" as="fact" hint-placeholder-count="4">
+              <div style="display: flex; justify-content: space-between; gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--rule-soft); font-size: var(--size-small);">
+                <span style="color: var(--text-muted);">{{ fact.k }}</span><span>{{ fact.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top: var(--space-3);">
+            <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" variant="quiet" as="a" href="https://www.linkedin.com/in/andressafdie" hint-size="auto,40px">{{ C.about.linkedinLabel }}</x-import>
+          </div>
+        </div>
+        <div style="aspect-ratio: 4 / 5; border-radius: var(--radius-surface); overflow: hidden; background: var(--surface-card); box-sizing: border-box;">
+          <img src="uploads/photo_upload-1790187132661-5aci.png" alt="Portrait of Andrés Safdie" width="320" height="400" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.75);">
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="padding: var(--space-6) var(--page-margin) 0; box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.faq.title }}" note="{{ C.labels.faq.note }}" hint-size="100%,80px"></x-import>
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Accordion" items="{{ faqItems }}" style="margin-top: var(--space-4);" hint-size="100%,400px"></x-import>
+    </section>
+
+    <section id="contact" style="padding: var(--space-6) var(--page-margin); box-sizing: border-box;">
+      <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.SectionHeader" title="{{ C.labels.contact.title }}" hint-size="100%,60px"></x-import>
+      <h3 style="margin: var(--space-4) 0 0; font-size: 40px; line-height: 1.1; letter-spacing: -0.035em; font-weight: var(--weight-semibold); text-wrap: balance; max-width: 1100px;">{{ C.contact.headline }}</h3>
+      <p style="margin-top: 18px; font-size: var(--size-lead); line-height: var(--lh-lead); color: var(--text-secondary); max-width: 1100px;">{{ C.contact.sub }}</p>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-5); margin-top: var(--space-4); align-items: start;">
+        <div>
+          <div style="border-top: 1px solid var(--rule);">
+            <div style="display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--rule-soft); font-size: var(--size-small); flex-wrap: wrap;">
+              <span style="color: var(--text-muted);">{{ C.contact.emailLabel }}</span>
+              <a href="mailto:info@safdieconsulting.com" style="font-family: var(--font-mono); font-size: 13px;">info@safdieconsulting.com</a>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--rule-soft); font-size: var(--size-small); flex-wrap: wrap;">
+              <span style="color: var(--text-muted);">{{ C.contact.linkedinCompanyLabel }}</span>
+              <a href="https://www.linkedin.com/company/safdie-consulting" style="font-family: var(--font-mono); font-size: 13px;">linkedin.com/company/safdie-consulting</a>
+            </div>
+            <div style="display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--rule-soft); font-size: var(--size-small); flex-wrap: wrap;">
+              <span style="color: var(--text-muted);">{{ C.contact.linkedinPersonalLabel }}</span>
+              <a href="https://www.linkedin.com/in/andressafdie" style="font-family: var(--font-mono); font-size: 13px;">linkedin.com/in/andressafdie</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="border-top: 1px solid var(--rule); padding-top: 14px;">
+            <div style="font-family: var(--font-mono); font-size: 11.5px; letter-spacing: var(--track-eyebrow); text-transform: uppercase; color: var(--text-accent);">{{ C.contact.bookingLabel }}</div>
+            <div style="margin-top: 10px; font-family: var(--font-mono); font-size: 13px;"><a href="https://tidycal.com/m8n0n8r/30-minute-meeting" target="_blank" rel="noreferrer">tidycal.com/m8n0n8r/30-minute-meeting</a></div>
+            <div style="margin-top: 14px; font-size: 13px; line-height: 1.5; color: var(--text-muted); max-width: 520px;">{{ C.contact.privacyNote }} <a href="Privacy Policy.dc.html">{{ C.contact.privacyLinkText }}</a>.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="background: var(--surface-inverse); color: var(--text-on-inverse); padding: var(--space-6) var(--page-margin); box-sizing: border-box;">
+    <div style="display: flex; gap: var(--space-6); flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
+      <div style="display: grid; gap: var(--space-3); max-width: 320px;">
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Logo" size="{{ 44 }}" tone="paper" hint-size="44px,44px"></x-import>
+        <div style="font-size: var(--size-small); line-height: 1.5; color: var(--text-on-inverse-2);">{{ C.footer.strap }}</div>
+        <div style="font-family: var(--font-mono); font-size: 13px; line-height: 1.8; color: var(--text-on-inverse-2);">
+          <a href="mailto:info@safdieconsulting.com" style="color: inherit;">info@safdieconsulting.com</a><br>
+          <a href="https://www.linkedin.com/company/safdie-consulting" style="color: inherit;">linkedin.com/company/safdie-consulting</a>
+        </div>
+      </div>
+      <div style="display: flex; gap: var(--space-6); flex-wrap: wrap;">
+        <div style="display: grid; gap: 12px; align-content: start;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--track-eyebrow); text-transform: uppercase; color: var(--sc-paper-45);">{{ C.footer.siteColTitle }}</div>
+          <sc-for list="{{ C.nav }}" as="l" hint-placeholder-count="6">
+            <a href="#{{ l.id }}" style="font-size: 15px; color: var(--text-on-inverse-2);">{{ l.label }}</a>
+          </sc-for>
+        </div>
+        <div style="display: grid; gap: 12px; align-content: start;">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: var(--track-eyebrow); text-transform: uppercase; color: var(--sc-paper-45);">{{ C.footer.legalColTitle }}</div>
+          <a href="Privacy Policy.dc.html" style="font-size: 15px; color: var(--text-on-inverse-2);">{{ C.footer.privacyLabel }}</a>
+          <button type="button" onClick="{{ openCookieSettings }}" style="font-size: 15px; color: var(--text-on-inverse-2); background: none; border: 0; padding: 0; text-align: left; cursor: pointer; font-family: inherit;">{{ C.footer.cookieSettingsLabel }}</button>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--rule-inverse); font-family: var(--font-mono); font-size: 11.5px; color: var(--sc-paper-45);">{{ C.footer.note }}</div>
+  </footer>
+
+  <sc-if value="{{ cookieOpen }}">
+    <div role="dialog" aria-label="Cookie settings" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--surface-inverse); color: var(--text-on-inverse); border-top: var(--border-accent) solid var(--surface-accent); padding: 22px var(--page-margin); display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; box-sizing: border-box;">
+      <div style="max-width: 620px; font-size: var(--size-small); line-height: var(--lh-small); color: var(--text-on-inverse-2);">{{ C.cookieBanner.text }} <a href="Privacy Policy.dc.html" style="color: var(--text-accent-inverse);">{{ C.cookieBanner.privacyLinkText }}</a>.</div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" size="sm" variant="inverse" onClick="{{ acceptCookies }}" hint-size="auto,36px">{{ C.cookieBanner.accept }}</x-import>
+        <x-import component-from-global-scope="SafdieConsultingDesignSystem_742842.Button" size="sm" variant="secondary" onClick="{{ declineCookies }}" style="color: var(--text-on-inverse); border-color: var(--sc-paper-45);" hint-size="auto,36px">{{ C.cookieBanner.decline }}</x-import>
+      </div>
+    </div>
+  </sc-if>
+</sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;numbersSectionBg&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#EAF1F6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Numbers strip&quot;}, &quot;numbersCardBg&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#0B1220&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Numbers strip&quot;}, &quot;numbersCardText&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#FFFFFF&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Numbers strip&quot;}, &quot;numbersCardSubtext&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#C9D6E0&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Numbers strip&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'en', langMenuOpen: false, cookieOpen: false, cookieChoice: null, EN: null, ES: null, openCases: {} };
+
+  toggleCase(id) {
+    this.setState((s) => ({ openCases: { ...s.openCases, [id]: !s.openCases[id] } }));
+  }
+
+  componentDidMount() {
+    import('./site-content.js').then((mod) => this.setState({ EN: mod.EN, ES: mod.ES }));
+    try {
+      const l = window.localStorage.getItem('sc_site_lang');
+      if (l === 'es' || l === 'en') this.setState({ lang: l });
+    } catch (e) {}
+    try {
+      const stored = window.localStorage.getItem('cookie_consent');
+      this.setState({ cookieChoice: stored, cookieOpen: !stored });
+      if (stored === 'granted') this.loadAnalytics();
+    } catch (e) {
+      this.setState({ cookieOpen: true });
+    }
+  }
+
+  setLang(l) {
+    this.setState({ lang: l, langMenuOpen: false });
+    try { window.localStorage.setItem('sc_site_lang', l); } catch (e) {}
+  }
+
+  decideCookie(value) {
+    try { window.localStorage.setItem('cookie_consent', value); } catch (e) {}
+    this.setState({ cookieChoice: value, cookieOpen: false });
+    if (value === 'granted') this.loadAnalytics();
+  }
+
+  loadAnalytics() {
+    if (document.getElementById('ga-script')) return;
+    const GA_ID = 'G-XXXXXXXXXX'; // placeholder — swap for the real GA4 Measurement ID before launch
+    const s = document.createElement('script');
+    s.id = 'ga-script';
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const C = lang === 'es' ? this.state.ES : this.state.EN;
+    if (!C) return { ready: false, C: null };
+
+    const heroBullets = C.hero.bullets.map((text, i) => ({ num: String(i + 1).padStart(2, '0'), text }));
+    const engagementSteps = C.engagement.map((s, i) => ({ ...s, num: String(i + 1).padStart(2, '0') }));
+    const caseItems = C.cases.map((c, i) => {
+      const isOpen = !!this.state.openCases[c.id];
+      return {
+        ...c,
+        num: String(i + 1).padStart(2, '0'),
+        isOpen,
+        minusTransform: isOpen ? 'scaleY(0)' : 'scaleY(1)',
+        toggle: () => this.toggleCase(c.id),
+      };
+    });
+    const aboutFacts = C.about.facts.map(([k, v]) => ({ k, v }));
+    const faqItems = C.faq.map((f, i) => ({ id: 'faq-' + i, title: f.q, body: f.a }));
+
+    return {
+      ready: true,
+      C,
+      heroBullets,
+      engagementSteps,
+      caseItems,
+      aboutFacts,
+      faqItems,
+      navCta: { label: C.navCtaLabel, href: '#contact' },
+      tierCardProps: { style: { display: 'flex', flexDirection: 'column', height: '100%', boxSizing: 'border-box' } },
+      numbersSectionBg: this.props.numbersSectionBg ?? '#EAF1F6',
+      numbersCardBg: this.props.numbersCardBg ?? '#0B1220',
+      numbersCardText: this.props.numbersCardText ?? '#FFFFFF',
+      numbersCardSubtext: this.props.numbersCardSubtext ?? '#C9D6E0',
+      falseVal: false,
+      currentLangLabel: lang === 'es' ? 'ES' : 'EN',
+      langMenuOpen: this.state.langMenuOpen,
+      toggleLangMenu: () => this.setState((s) => ({ langMenuOpen: !s.langMenuOpen })),
+      setLangEn: () => this.setLang('en'),
+      setLangEs: () => this.setLang('es'),
+      cookieOpen: this.state.cookieOpen,
+      openCookieSettings: () => this.setState({ cookieOpen: true }),
+      acceptCookies: () => this.decideCookie('granted'),
+      declineCookies: () => this.decideCookie('denied'),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

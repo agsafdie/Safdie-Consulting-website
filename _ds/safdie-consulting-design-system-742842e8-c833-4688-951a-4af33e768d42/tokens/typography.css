@@ -1,0 +1,52 @@
+:root {
+  /* ---- Families --------------------------------------------------------
+     Libre Franklin for everything a person READS.
+     IBM Plex Mono for everything a person CHECKS: labels, figures, dates,
+     tier codes, file names, sources. Never mono for running sentences. */
+  --font-sans: "Libre Franklin", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, Menlo, Monaco, monospace;
+
+  /* Email and other stripped environments (Gmail kills webfonts) */
+  --font-sans-fallback: Helvetica, Arial, sans-serif;
+  --font-mono-fallback: Consolas, Menlo, Monaco, monospace;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;  /* headlines stop here */
+  --weight-bold: 700;      /* wordmark and small caps only */
+
+  /* ---- Web scale (px) --------------------------------------------------
+     Paired size / line-height / tracking. Headlines are always 600 with
+     negative tracking; body is always 400. */
+  --size-display: 74px;   --lh-display: 0.98; /* @kind other */  --track-display: -0.035em; /* @kind other */
+  --size-h1:      56px;   --lh-h1:      1.04; /* @kind other */  --track-h1:      -0.032em; /* @kind other */
+  --size-h2:      40px;   --lh-h2:      1.10; /* @kind other */  --track-h2:      -0.030em; /* @kind other */
+  --size-h3:      28px;   --lh-h3:      1.20; /* @kind other */  --track-h3:      -0.025em; /* @kind other */
+  --size-lead:    20px;   --lh-lead:    1.50; /* @kind other */  --track-lead:     0; /* @kind other */
+  --size-body:    17px;   --lh-body:    1.60; /* @kind other */  --track-body:     0; /* @kind other */
+  --size-small:   15px;   --lh-small:   1.55; /* @kind other */  --track-small:    0; /* @kind other */
+  --size-eyebrow: 12px;   --lh-eyebrow: 1.40; /* @kind other */  --track-eyebrow:  0.14em; /* @kind other */
+  --size-caption: 12.5px; --lh-caption: 1.70; /* @kind other */  --track-caption:  0; /* @kind other */
+
+  /* ---- Slide scale (1920 x 1080) — nothing below 24px ------------------ */
+  --slide-display: 108px;
+  --slide-h1:       84px;
+  --slide-h2:       62px;
+  --slide-h3:       46px;
+  --slide-body:     30px;
+  --slide-small:    26px;
+  --slide-figure:  168px;
+
+  /* ---- Print scale (Letter proposal) ----------------------------------- */
+  --print-cover:   54px;
+  --print-h2:      34px;
+  --print-h3:      18px;
+  --print-body:    16px;
+  --print-small:   15px;
+  --print-eyebrow: 11px;
+  --print-footer: 10.5px;
+
+  /* ---- Measure ---------------------------------------------------------- */
+  --measure-body: 620px;   /* never wider */
+  --measure-lead: 660px;
+}

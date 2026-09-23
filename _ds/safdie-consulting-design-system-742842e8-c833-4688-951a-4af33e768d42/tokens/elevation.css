@@ -1,0 +1,12 @@
+:root {
+  /* The system has NO shadow. Depth is expressed by ground colour and by the
+     hairline rule, never by a drop shadow, glow, or blur. These tokens exist
+     so consumers have something to point at when they reach for a shadow and
+     find the answer is "none". */
+  --shadow-none: none;
+  --elevation-card: none;
+  --elevation-overlay: none;
+
+  /* Overlays: a modal or drawer dims the page with flat ink, no blur. */
+  --scrim: rgba(11, 18, 32, 0.62);
+}

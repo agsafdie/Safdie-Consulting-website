@@ -1,0 +1,64 @@
+:root {
+  /* ---- Base palette ---------------------------------------------------- */
+  /* Two colours carry the brand: Ink and a cool slate-blue accent. Everything
+     else has a defined job. If a surface needs a fifth colour, the layout is wrong. */
+  --sc-ink:              #0B1220;  /* oklch(0.19 0.033 262) */
+  --sc-ultramarine:      #2B5F8A;  /* slate-blue accent */
+  --sc-ultramarine-deep: #1D4666;  /* hover / press only */
+  --sc-haze:             #9DC4DE;  /* accent ON dark grounds */
+  --sc-mist:             #DDE3F0;  /* flat fills, tags, table highlight */
+  --sc-slate:            #5A6478;  /* secondary text */
+  --sc-paper:            #F6F7F9;  /* default page ground */
+  --sc-white:            #FFFFFF;  /* cards only */
+
+  /* Charts and status only. Never as brand colour, never as a surface. */
+  --sc-positive: #1F7A5C;
+  --sc-risk:     #B4442E;
+
+  /* ---- Ink alphas ------------------------------------------------------
+     The system tints ink rather than introducing greys. These are the only
+     sanctioned steps. */
+  --sc-ink-90: rgba(11, 18, 32, 0.90);
+  --sc-ink-78: rgba(11, 18, 32, 0.78);
+  --sc-ink-70: rgba(11, 18, 32, 0.70);
+  --sc-ink-62: rgba(11, 18, 32, 0.62);
+  --sc-ink-45: rgba(11, 18, 32, 0.45);
+  --sc-ink-22: rgba(11, 18, 32, 0.22);
+  --sc-ink-16: rgba(11, 18, 32, 0.16);
+  --sc-ink-12: rgba(11, 18, 32, 0.12);
+  --sc-ink-08: rgba(11, 18, 32, 0.08);
+
+  /* ---- Paper alphas (for use on Ink grounds) --------------------------- */
+  --sc-paper-82: rgba(246, 247, 249, 0.82);
+  --sc-paper-70: rgba(246, 247, 249, 0.70);
+  --sc-paper-60: rgba(246, 247, 249, 0.60);
+  --sc-paper-45: rgba(246, 247, 249, 0.45);
+  --sc-paper-20: rgba(246, 247, 249, 0.20);
+  --sc-paper-12: rgba(246, 247, 249, 0.12);
+
+  /* ---- Semantic aliases — prefer these in components ------------------- */
+  --surface-page:      var(--sc-paper);
+  --surface-card:      var(--sc-white);
+  --surface-inverse:   var(--sc-ink);
+  --surface-fill:      var(--sc-mist);
+  --surface-accent:    var(--sc-ultramarine);
+
+  --text-body:         var(--sc-ink);
+  --text-secondary:    var(--sc-ink-70);
+  --text-muted:        var(--sc-ink-45);
+  --text-accent:       var(--sc-ultramarine);
+  --text-on-inverse:   var(--sc-paper);
+  --text-on-inverse-2: var(--sc-paper-70);
+  --text-on-accent:    var(--sc-white);
+  --text-accent-inverse: var(--sc-haze); /* accent text ON ink */
+
+  --rule-strong:       var(--sc-ink);        /* 2px table heads */
+  --rule:              var(--sc-ink-16);     /* section dividers */
+  --rule-soft:         var(--sc-ink-12);     /* row dividers */
+  --rule-inverse:      var(--sc-paper-20);
+
+  --link:              var(--sc-ultramarine);
+  --link-hover:        var(--sc-ink);
+
+  --focus-ring:        var(--sc-ultramarine);
+}

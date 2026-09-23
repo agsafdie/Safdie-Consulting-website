@@ -1,0 +1,34 @@
+:root {
+  /* ---- Spacing scale ----------------------------------------------------
+     Six steps, each with a job. Do not interpolate between them. */
+  --space-1:  4px;   /* hairline offsets */
+  --space-2: 10px;   /* inline gaps, chip padding */
+  --space-3: 24px;   /* grid gutter, card-to-card */
+  --space-4: 40px;   /* card padding */
+  --space-5: 72px;   /* page margin */
+  --space-6: 80px;   /* section top padding */
+
+  /* ---- Grid -------------------------------------------------------------- */
+  --grid-columns: 12; /* @kind other */
+  --grid-gutter: var(--space-3);
+  --page-margin: var(--space-5);
+  --content-max: 1296px;   /* 1440 canvas minus 2x page margin */
+
+  /* ---- Radius ------------------------------------------------------------
+     The system default is softly rounded. The website tunes the two role
+     tokens below further on its root element (see ui_kits/website/Site.jsx) —
+     pill controls, 20px cards. Components read the role token, never
+     --radius directly. */
+  --radius: 10px;
+  --radius-full: 9999px;
+
+  /* Role tokens — override these to soften a surface, not --radius. */
+  --radius-control: var(--radius);   /* buttons, tags, form fields */
+  --radius-surface: var(--radius);   /* cards, framed containers, placeholders */
+
+  /* ---- Border widths ------------------------------------------------------ */
+  --border-hairline: 1px;   /* every divider and card edge */
+  --border-accent: 3px;     /* pull-quote bar, card top rule */
+  --border-strong: 4px;     /* slide card top rule, stage marker */
+  --border-table-head: 2px;
+}
